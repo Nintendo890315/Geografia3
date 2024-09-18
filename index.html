@@ -1,0 +1,735 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>A INTER-RELAÇÃO ENTRE DOMÍNIOS MORFOCLIMÁTICOS, SOLOS E RELEVO: UMA ABORDAGEM INTEGRADA DO BRASIL</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 237, 214, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(249, 228, 188, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="1020b3cb-3a64-80d1-9ea3-efdcbb147fd5" class="page sans"><header><h1 class="page-title">A INTER-RELAÇÃO ENTRE DOMÍNIOS MORFOCLIMÁTICOS, SOLOS E RELEVO: UMA ABORDAGEM INTEGRADA DO BRASIL</h1><p class="page-description"></p></header><div class="page-body"><p id="b7f5e969-1aa9-415c-86ee-a0c04c8ebc9a" class="">
+</p><p id="1030b3cb-3a64-8063-bc41-dc79e3883bc5" class="">
+</p><p id="1030b3cb-3a64-80ce-b849-d088c93f9249" class="">
+</p><p id="1030b3cb-3a64-80f2-b640-c7a05dcdfee4" class=""><mark class="highlight-blue_background">Gabriel &amp; Yago</mark></p><p id="1030b3cb-3a64-8021-8372-e92649f7fea1" class=""><mark class="highlight-purple_background">Sthephany &amp; Thamires</mark></p><p id="1030b3cb-3a64-809f-befd-cb618812b54a" class=""><mark class="highlight-yellow_background">Kevin &amp; Carlos</mark></p><p id="1030b3cb-3a64-8051-b7f4-c7dee7b9a034" class=""><mark class="highlight-gray_background">Macedo</mark></p><p id="1030b3cb-3a64-801d-a53a-decd6b87990d" class=""><mark class="highlight-pink_background">Yago</mark></p><p id="1030b3cb-3a64-8025-96e0-f48e789750a8" class=""><mark class="highlight-red_background">Gabriel &amp; Macedo</mark></p><figure id="1030b3cb-3a64-8042-b15e-e881a8d9d9fc" class="image"><a href="image.png"><img style="width:458px" src="image.png"/></a></figure><p id="1030b3cb-3a64-8005-bad6-d9c71a1190cd" class="">
+</p><p id="1030b3cb-3a64-80b4-bfd6-fd19926d25c3" class=""><mark class="highlight-blue_background">Domínios morfoclimáticos são grandes unidades naturais que combinam características geomorfológicas (relevo) e climáticas, formando regiões distintas em termos de paisagens, solos, vegetação e hidrografia. Esses domínios resultam da interação entre os diferentes elementos do clima (temperatura, precipitação, umidade, etc.) e a morfologia do terreno ao longo do tempo, dando origem a padrões específicos de erosão, deposição, formação de solos e cobertura vegetal.</mark></p><p id="1030b3cb-3a64-8073-a633-db97ad581334" class=""><mark class="highlight-blue_background">Esses domínios ajudam a compreender a complexidade ambiental e geográfica de uma região, facilitando estudos em áreas como ecologia, geografia, planejamento ambiental e desenvolvimento sustentável.</mark></p><figure id="1030b3cb-3a64-80ee-8150-cc29ed9323f7" class="image"><a href="image%201.png"><img style="width:443px" src="image%201.png"/></a></figure><p id="e4541220-3115-4069-a4ce-c0ec302d4ca8" class=""><mark class="highlight-blue_background"><strong>Aziz Ab&#x27;Saber</strong></mark><mark class="highlight-blue_background">, um dos mais renomados geógrafos brasileiros, desenvolveu o conceito de </mark><mark class="highlight-blue_background"><strong>domínios morfoclimáticos</strong></mark><mark class="highlight-blue_background"> com o objetivo de compreender e classificar a complexa diversidade de paisagens naturais do Brasil. Sua intenção foi fornecer uma ferramenta teórica e prática que analisasse a interação entre fatores naturais como relevo, clima, solos e vegetação, que moldam o território brasileiro. O conceito de domínios morfoclimáticos propõe a síntese das características geográficas do Brasil em grandes unidades espaciais, considerando não apenas aspectos climáticos, mas também relevo, tipos de solos, vegetação e hidrografia. Essa abordagem holística reconhece que as características físicas do ambiente natural desempenham um papel crucial na configuração dos ecossistemas e na distribuição da vegetação.</mark></p><figure id="1030b3cb-3a64-8030-be87-c5e63b9e8be3" class="image"><a href="image%202.png"><img style="width:443px" src="image%202.png"/></a></figure><p id="23ef6a31-5efa-4b30-97c1-e8d0c4be8db1" class=""><mark class="highlight-blue_background">A interação entre clima, vegetação, solos e relevo é fundamental para a formação e manutenção dos ecossistemas e paisagens naturais. Esses elementos estão interligados e influenciam-se mutuamente, desempenhando um papel crucial no equilíbrio ambiental, na biodiversidade e nas dinâmicas dos processos naturais.</mark></p><p id="1030b3cb-3a64-800a-a3df-fc5c254849c3" class="">
+</p><ol type="1" id="2ba5172a-9a83-484f-ae4c-9017eb0b2e71" class="numbered-list" start="1"><li><mark class="highlight-blue_background"><strong>Formação e Tipos de Solos</strong></mark></li></ol><ul id="1a3789f9-2fec-491c-846c-e4dce4aeb158" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Clima</strong></mark><mark class="highlight-blue_background">: Influencia a formação do solo por meio do intemperismo das rochas, com maior profundidade em climas úmidos e quentes.</mark></li></ul><ul id="50802921-f6f2-41c0-ab44-0d2ede04cf0e" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Vegetação</strong></mark><mark class="highlight-blue_background">: Contribui para a fertilidade do solo através da decomposição de matéria orgânica e ajuda na estabilização e prevenção de erosão.</mark></li></ul><ul id="18c835ce-1a5a-47dc-a54e-301bd90307ff" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Relevo</strong></mark><mark class="highlight-blue_background">: Afeta a distribuição do solo e da água; em áreas inclinadas, a erosão é maior, enquanto em áreas planas, ocorre maior acúmulo de materiais, formando solos mais profundos.</mark></li></ul><p id="1030b3cb-3a64-8023-bfb5-f06e882bc25c" class="">
+</p><ol type="1" id="74a780b6-d2a9-41ca-b881-1aadbd3bdb25" class="numbered-list" start="2"><li><mark class="highlight-blue_background"><strong>Distribuição e Tipos de Vegetação</strong></mark></li></ol><ul id="6948b164-11c8-40d1-9095-220222297d4c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Clima</strong></mark><mark class="highlight-blue_background">: Determina os tipos de vegetação; climas úmidos suportam florestas densas, enquanto climas áridos suportam vegetação xerófila.</mark></li></ul><ul id="e96787ee-c2e4-4768-8aa5-b41fbfb9c0c5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Solos</strong></mark><mark class="highlight-blue_background">: A qualidade do solo influência a diversidade e densidade da vegetação.</mark></li></ul><ul id="3cd74845-d5e9-44b6-94b8-8f87f64d5ed9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Relevo</strong></mark><mark class="highlight-blue_background">: A distribuição da vegetação varia com a altitude, inclinação e exposição ao sol, especialmente em regiões montanhosas.</mark></li></ul><p id="1030b3cb-3a64-80eb-9981-d251a0712e10" class="">
+</p><ol type="1" id="3e0cfedc-1ef1-424b-9d00-8f25cf2d8934" class="numbered-list" start="3"><li><mark class="highlight-blue_background"><strong>Ciclos Hidrológicos e Disponibilidade de Água</strong></mark></li></ol><ul id="6b077e4f-a660-4964-beed-1655d007f49d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Clima</strong></mark><mark class="highlight-blue_background">: O clima afeta o ciclo da água, influenciando a quantidade de precipitação, evaporação e transpiração. Regiões com muita chuva têm mais corpos d&#x27;água, afetando a vegetação e o solo.</mark></li></ul><ul id="1030b3cb-3a64-8066-8b68-e9ba18dc85b5" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Relevo</strong></mark><mark class="highlight-blue_background">: O relevo determina como a água flui e se acumula. Terrenos elevados podem ter mais escoamento, enquanto áreas baixas acumulam água, formando pântanos ou lagos.</mark></li></ul><ul id="1030b3cb-3a64-80bd-bc60-d5abf5b44627" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Vegetação e Solos</strong></mark><mark class="highlight-blue_background">: A vegetação ajuda a reter água, reduzindo o escoamento e promovendo a infiltração no solo. Solos ricos em matéria orgânica também retêm mais água, essencial para ecossistemas saudáveis.</mark></li></ul><p id="1030b3cb-3a64-802e-9069-fbd8aaf17152" class="">
+</p><ol type="1" id="1030b3cb-3a64-80b2-aed7-c22e61de5d64" class="numbered-list" start="4"><li><mark class="highlight-blue_background"><strong>Controle de Erosão e Estabilidade do Terreno</strong></mark></li></ol><ul id="1030b3cb-3a64-805a-8fb8-e7c7e83d183f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Vegetação</strong></mark><mark class="highlight-blue_background">: As raízes das plantas fixam o solo, evitando a erosão por vento e água. Sem vegetação, o solo fica vulnerável a desgastes e deslizamentos.</mark></li></ul><ul id="1030b3cb-3a64-8049-b225-ea40492fb849" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"><strong>Relevo</strong></mark><mark class="highlight-blue_background">: Em áreas com relevo acentuado, a vegetação é crucial para prevenir deslizamentos e erosão. O relevo também molda a formação de canais e cursos d&#x27;água, que podem aumentar a erosão se o solo não estiver bem estabilizado pela vegetação.</mark></li></ul><p id="1030b3cb-3a64-8016-8738-efa5ab19619e" class="">
+</p><figure id="1030b3cb-3a64-809c-8cf5-cf81fca13362" class="image"><a href="image%203.png"><img style="width:576px" src="image%203.png"/></a></figure><p id="1030b3cb-3a64-80fd-ae52-ff64888ff1ad" class="">
+</p><p id="1030b3cb-3a64-80df-87ef-da96bf8734f9" class="">
+</p><h1 id="1030b3cb-3a64-800c-90ce-dd08a13f30cf" class=""><mark class="highlight-purple_background">Domínio Amazônico</mark></h1><p id="1030b3cb-3a64-803f-b673-d8d53cfa4e2c" class="">
+</p><figure id="1030b3cb-3a64-8070-b1ad-ee82b830bb75" class="image"><a href="image%204.png"><img style="width:384px" src="image%204.png"/></a></figure><figure id="7cd83b4d-353e-47b4-b365-dd3610bc58c4" class="image"><a href="image%205.png"><img style="width:384px" src="image%205.png"/></a></figure><figure id="1030b3cb-3a64-8024-b27c-f7f5f9ed83cd" class="image"><a href="image%206.png"><img style="width:432px" src="image%206.png"/></a></figure><figure id="1030b3cb-3a64-8041-a9f6-d4077949935f" class="image"><a href="image%207.png"><img style="width:480px" src="image%207.png"/></a></figure><p id="1030b3cb-3a64-809e-808a-d4ad7b75a4c5" class="">
+</p><p id="1030b3cb-3a64-8024-b3a6-d25b52b8b2ab" class=""><mark class="highlight-purple_background"><strong>Clima Equatorial</strong></mark><mark class="highlight-purple_background">: Altas temperaturas (24°C a 27°C), umidade elevada (acima de 80%) e chuvas abundantes (acima de 2.000 mm anuais).</mark></p><p id="ce0196a0-1906-4dd2-ba10-0aa082d4251c" class=""><mark class="highlight-purple_background"><strong>Vegetação Densa</strong></mark><mark class="highlight-purple_background">: Floresta amazônica tropical úmida, com dossel fechado e rica biodiversidade, incluindo muitas espécies endêmicas.</mark></p><p id="1030b3cb-3a64-80e1-9f61-df85f1c3ed39" class=""><mark class="highlight-purple_background"><strong>Solos Lateríticos (Latossolos): </strong></mark><mark class="highlight-purple_background">Ricos em ferro e alumínio, com coloração avermelhada. Férteis na superfície devido à decomposição orgânica, mas menos produtivos em profundidade devido à lixiviação.</mark></p><p id="8eacdf06-2741-47e4-8070-3ea5ee83a594" class=""><mark class="highlight-purple_background"><strong>Relevo de Planícies e Terras Baixas</strong></mark><mark class="highlight-purple_background">: Com altitudes entre 0 e 300 metros, composto por planícies aluviais. O sistema fluvial da Amazônia é o maior do mundo, essencial para o ecossistema local.</mark></p><p id="1030b3cb-3a64-808d-b453-d5612a89b651" class="">
+</p><h1 id="1030b3cb-3a64-80a1-a66b-f02edeea2c19" class=""><mark class="highlight-purple_background">Domínio Caatinga</mark></h1><p id="1030b3cb-3a64-8085-8b91-cba0bb15078b" class="">
+</p><figure id="cb32bb77-bd08-4134-814d-b5e41671b30b" class="image"><a href="image%208.png"><img style="width:443px" src="image%208.png"/></a></figure><figure id="1030b3cb-3a64-80c4-af1b-f19db444670e" class="image"><a href="image%209.png"><img style="width:443px" src="image%209.png"/></a></figure><figure id="1030b3cb-3a64-80ef-ac57-d0064322f292" class="image"><a href="image%2010.png"><img style="width:443px" src="image%2010.png"/></a></figure><figure id="1030b3cb-3a64-80bd-91f7-d37cce73fff4" class="image"><a href="image%2011.png"><img style="width:443px" src="image%2011.png"/></a></figure><figure id="1030b3cb-3a64-803c-a8c0-da6df0cae5cb" class="image"><a href="image%2012.png"><img style="width:443px" src="image%2012.png"/></a></figure><p id="1030b3cb-3a64-80a7-85f6-f93e30b8261a" class="">
+</p><p id="1030b3cb-3a64-8078-844d-ec7f58ec57b4" class=""><mark class="highlight-purple_background"><strong>Clima Semiárido</strong></mark><mark class="highlight-purple_background">: Altas temperaturas (frequentemente acima de 30°C) e chuvas escassas e irregulares, variando entre 250 mm e 800 mm anuais, concentradas em poucos meses.</mark></p><p id="1030b3cb-3a64-8071-90b8-c5fe00741986" class=""><mark class="highlight-purple_background"><strong>Vegetação Xerófita</strong></mark><mark class="highlight-purple_background">: Composta por plantas adaptadas à seca, como arbustos espinhosos, cactos e árvores pequenas que perdem folhas na seca. Adaptações incluem folhas pequenas, caules suculentos e raízes profundas.</mark></p><p id="e03ac6e2-0538-4c50-944f-534037b08aa1" class=""><mark class="highlight-purple_background"><strong>Solos Pedregosos (Regossolo - Latosolo)</strong></mark><mark class="highlight-purple_background">: Solos arenosos a argilosos, pobres em nutrientes, com baixa retenção de água e cobertos por uma crosta de pedras, o que dificulta a fertilidade.</mark></p><p id="37d59115-7765-491b-922a-81bd5e8e0ff7" class=""><mark class="highlight-purple_background"><strong>Relevo de Depressões Intermontanas</strong></mark><mark class="highlight-purple_background">: Depressões entre cadeias de montanhas, influenciando a drenagem e a formação de rios temporários e lagoas sazonais, além de planaltos.</mark></p><p id="1030b3cb-3a64-8095-8cc0-f10747f615fc" class="">
+</p><h1 id="1030b3cb-3a64-8068-bf44-c57c5042f365" class=""><mark class="highlight-yellow_background">Domínio Mares de Morros </mark></h1><figure id="1030b3cb-3a64-80c5-8a08-df0d7a075787" class="image"><a href="image%2013.png"><img style="width:445px" src="image%2013.png"/></a></figure><figure id="1030b3cb-3a64-80b7-9323-fad740cc5f06" class="image"><a href="image%2014.png"><img style="width:445px" src="image%2014.png"/></a></figure><figure id="1030b3cb-3a64-8023-a515-d5131fd5756f" class="image"><a href="image%2015.png"><img style="width:445px" src="image%2015.png"/></a></figure><figure id="1030b3cb-3a64-8034-bf56-d627a63828cb" class="image"><a href="image%2016.png"><img style="width:445px" src="image%2016.png"/></a></figure><p id="1030b3cb-3a64-80ef-b502-c82876ba6260" class="">
+</p><p id="1030b3cb-3a64-805d-977e-d234a8dce970" class=""><mark class="highlight-yellow_background"><strong>Clima Tropical Úmido</strong></mark><mark class="highlight-yellow_background">: Temperaturas elevadas e alta umidade durante todo o ano, com chuvas abundantes e bem distribuídas entre 1.200 mm e 2.500 mm anuais, favorecendo uma vegetação sempre verde.</mark></p><p id="01d8dc5d-6730-43cf-a2d4-41f75dc05628" class=""><mark class="highlight-yellow_background"><strong>Vegetação da Floresta Atlântica</strong></mark><mark class="highlight-yellow_background">: Densa e diversificada, com árvores grandes como jequitibá e pau-brasil, além de epífitas como bromélias e orquídeas. Rica biodiversidade, uma das maiores do mundo, ameaçada por exploração e urbanização.</mark></p><p id="1030b3cb-3a64-80ac-ba1c-d0809f9f995f" class=""><mark class="highlight-yellow_background"><strong>Solos Argilosos  (Lato, Cambi, Nitos)</strong></mark><mark class="highlight-yellow_background">: Solos bem drenados, mas com lixiviação que pode reduzir a fertilidade. A camada superficial rica em matéria orgânica sustenta os nutrientes necessários para a floresta.</mark></p><p id="1030b3cb-3a64-8000-8efc-fc40e1f30f1c" class=""><mark class="highlight-yellow_background"><strong>Relevo de Escarpas e Morros</strong></mark><mark class="highlight-yellow_background">: Caracterizado por escarpas e morros, conhecidos como Mares de Morros, resultantes da erosão, influenciando o microclima e a diversidade de habitats.</mark></p><p id="8dcc9beb-b01b-42de-845d-cfbf6262de12" class="">
+</p><h1 id="1030b3cb-3a64-800c-95ce-e6a32b93fc90" class=""><mark class="highlight-yellow_background">Domínio Cerrado</mark></h1><figure id="af4c37e0-5e5c-40ff-b972-4f9f52f2633d" class="image"><a href="image%2017.png"><img style="width:445px" src="image%2017.png"/></a></figure><figure id="1030b3cb-3a64-8001-bb94-c7430b3b565a" class="image"><a href="image%2018.png"><img style="width:445px" src="image%2018.png"/></a></figure><figure id="1030b3cb-3a64-8098-a429-c1f81df766a3" class="image"><a href="image%2019.png"><img style="width:445px" src="image%2019.png"/></a></figure><p id="55eed811-2cca-413a-b96f-811b320d1a9c" class="">
+</p><figure id="bfa917d6-9f19-4586-be22-e36feb4b0c57" class="image"><a href="image%2020.png"><img style="width:445px" src="image%2020.png"/></a></figure><p id="199ae848-46b3-48f1-af2a-20fd410ef5e9" class=""><mark class="highlight-yellow_background"><strong>Clima Tropical Sazonal</strong></mark><mark class="highlight-yellow_background">: Temperaturas médias entre 20°C e 26°C, com estações bem definidas. A estação chuvosa vai de outubro a abril, e a seca de maio a setembro, afetando diretamente a vegetação e a fauna do Cerrado.</mark></p><p id="8ee023e9-275c-4d2d-992c-5fa05aa59759" class=""><mark class="highlight-yellow_background"><strong>Vegetação de Savana</strong></mark><mark class="highlight-yellow_background">: Composta por gramíneas, arbustos e árvores de pequeno a médio porte, como ipê e pequizeiro. As árvores têm cascas grossas e raízes profundas, adaptadas ao solo pobre e à seca. Alta diversidade de espécies, muitas endêmicas.</mark></p><p id="75891eab-fac1-4037-ac01-bcce9e0cc233" class=""><mark class="highlight-yellow_background"><strong>Solos Latossolos</strong></mark><mark class="highlight-yellow_background">: Solos profundos, bem drenados e ácidos, com baixa fertilidade. Corrigidos para a agricultura, favorecendo a expansão agrícola, especialmente da soja.</mark></p><p id="9bf3bd6a-6362-468d-9ddc-cfce71256e39" class=""><mark class="highlight-yellow_background"><strong>Relevo de Chapadas</strong></mark><mark class="highlight-yellow_background">: Caracterizado por superfícies planas ou suavemente onduladas, intercaladas por vales e rios. As chapadas abrigam nascentes que alimentam grandes bacias hidrográficas, essenciais para o ciclo hidrológico e recarga de aquíferos.</mark></p><p id="ca11cfa2-b590-401e-981a-18816c2041de" class="">
+</p><h1 id="d03a6431-3f94-4087-8179-30a87bed0a64" class=""><mark class="highlight-purple_background">Domínio Araucárias</mark></h1><figure id="d8bced10-c81a-4fb1-997e-2beffcd59500" class="image"><a href="image%2021.png"><img style="width:445px" src="image%2021.png"/></a></figure><figure id="7e343d9e-f952-47ef-aa5e-bb911fd54b70" class="image"><a href="image%2022.png"><img style="width:389.9910888671875px" src="image%2022.png"/></a></figure><figure id="1030b3cb-3a64-804f-bebf-ec9891bbe272" class="image"><a href="image%2023.png"><img style="width:445px" src="image%2023.png"/></a></figure><p id="1030b3cb-3a64-8059-8dea-d0eac2983dbd" class=""><mark class="highlight-purple_background"><strong>Clima Subtropical</strong></mark><mark class="highlight-purple_background">: Verões quentes e invernos frios, com geadas e neve em áreas mais altas. Chuvas bem distribuídas ao longo do ano, variando entre 1.400 e 2.000 mm anuais.</mark></p><p id="1030b3cb-3a64-8064-8a73-f9dfed53a9d4" class=""><mark class="highlight-purple_background"><strong>Vegetação de Floresta de Araucárias</strong></mark><mark class="highlight-purple_background">: Predominada pela Araucária angustifolia, com outras espécies como imbuia e cedro, e rica diversidade de fauna.</mark></p><p id="044dac76-0169-4f14-9138-56cf25e241d3" class=""><mark class="highlight-purple_background"><strong>Solos Férteis</strong></mark><mark class="highlight-purple_background">: Solos ricos em matéria orgânica, como cambissolos e podzóis, favoráveis para agricultura e silvicultura. Exploração intensa levou ao desmatamento.</mark></p><p id="1030b3cb-3a64-8044-acdb-d195a919d29c" class=""><mark class="highlight-purple_background"><strong>Relevo de Planaltos</strong></mark><mark class="highlight-purple_background">: Caracterizado por planaltos com altitudes entre 800 e 1.200 metros, com florestas densas e nascentes de rios importantes.</mark></p><p id="35bf614c-4750-45a5-a73a-058b30470432" class="">
+</p><h1 id="c60d4c1a-0124-4a2d-94a2-ba228c1bbc42" class=""><mark class="highlight-yellow_background">Domínio Pradarias</mark></h1><figure id="1030b3cb-3a64-80a8-9c17-c97d3b6b9f5d" class="image"><a href="image%2024.png"><img style="width:445px" src="image%2024.png"/></a></figure><figure id="1030b3cb-3a64-8041-aacb-febe74830275" class="image"><a href="image%2025.png"><img style="width:424.9904479980469px" src="image%2025.png"/></a></figure><figure id="1030b3cb-3a64-80fc-a6e9-c600669cef59" class="image"><a href="image%2026.png"><img style="width:445px" src="image%2026.png"/></a></figure><p id="1030b3cb-3a64-8046-a2eb-e39b1e0cf484" class=""><mark class="highlight-yellow_background">As pradarias, ou Pampas, são caracterizadas por vastas áreas de gramíneas em um clima temperado.</mark></p><p id="1030b3cb-3a64-80e9-aca3-e8bb0c6e32d5" class=""><mark class="highlight-yellow_background"><strong>Clima Temperado: </strong></mark><mark class="highlight-yellow_background">Com estações bem definidas, o clima apresenta verões quentes e invernos frios, com precipitação moderada entre 1.000 e 1.500 mm anuais.</mark></p><p id="bb7299ba-a325-4fc6-8f32-760a85dceb69" class=""><mark class="highlight-yellow_background"><strong>Vegetação de Campos: </strong></mark><mark class="highlight-yellow_background">A vegetação é dominada por gramíneas e plantas herbáceas, adaptadas às variações climáticas, com poucas árvores e uma rica fauna de aves, roedores e insetos.</mark></p><p id="1030b3cb-3a64-8078-9f1d-defbf82eb342" class=""><mark class="highlight-yellow_background"><strong>Solos de Campos (Cambissolos , Nitossolos): </strong></mark><mark class="highlight-yellow_background">Os solos são férteis e ricos em matéria orgânica, ideais para agricultura e pecuária, exigindo conservação para evitar degradação.</mark></p><p id="1030b3cb-3a64-8062-b2ed-e83cfe0260f1" class=""><mark class="highlight-yellow_background"><strong>Relevo de Planícies: </strong></mark><mark class="highlight-yellow_background">O relevo é composto por amplas planícies, ideais para pastoreio e agricultura, e essenciais para a recarga de aquíferos.</mark></p><p id="1030b3cb-3a64-8004-96e3-c939cbde42a6" class="">
+</p><h1 id="1030b3cb-3a64-806d-9205-c5ad0d0ad439" class=""><mark class="highlight-gray_background">Faixas de Transição</mark></h1><figure id="1030b3cb-3a64-80c3-bd30-e8272de9fb54" class="image"><a href="image%2027.png"><img style="width:445px" src="image%2027.png"/></a></figure><p id="1030b3cb-3a64-8066-9785-fb4a75698bf0" class=""><mark class="highlight-gray_background"><strong>Faixas de Transição</strong></mark><mark class="highlight-gray_background">: Áreas onde diferentes biomas, como Amazônia e Cerrado, se encontram e se misturam, combinando características de ambos, como plantas, animais e clima.</mark></p><p id="1030b3cb-3a64-8021-9eba-f53076215264" class=""><mark class="highlight-gray_background"><strong>Alta Biodiversidade</strong></mark><mark class="highlight-gray_background">: Essas regiões são ricas em espécies de ambos os biomas e algumas únicas, sendo ecologicamente importantes.</mark></p><p id="1030b3cb-3a64-80bc-9788-f191db82c1c5" class=""><mark class="highlight-gray_background"><strong>Vulnerabilidade</strong></mark><mark class="highlight-gray_background">: Mais suscetíveis a mudanças ambientais, como desmatamento e alterações climáticas.</mark></p><p id="1030b3cb-3a64-800f-8698-f845b95bbac3" class=""><mark class="highlight-gray_background">P</mark><mark class="highlight-gray_background"><strong>reservaç</strong></mark><mark class="highlight-gray_background">ão: A conservação dessas áreas é crucial para manter a saúde e a diversidade dos ecossistemas.</mark></p><p id="1030b3cb-3a64-80c4-925e-d274e10ce300" class=""><mark class="highlight-gray_background"><strong>Exemplos</strong></mark><mark class="highlight-gray_background">: </mark></p><p id="1030b3cb-3a64-80f5-9572-e7e2eaebaf40" class=""><mark class="highlight-gray_background"><strong>Mata dos Cocais</strong></mark><mark class="highlight-gray_background">: Área de transição entre Amazônia, Cerrado e Caatinga, rica em palmeiras como babaçu e carnaúba. </mark></p><p id="1030b3cb-3a64-8046-bb3d-f7ef300b00ae" class=""><mark class="highlight-gray_background"><strong>Pantanal: </strong></mark><mark class="highlight-gray_background">Planície inundável, com vegetação diversificada e estações de chuvas e secas bem definidas.</mark></p><figure id="1030b3cb-3a64-80e9-b4f9-f046658f86d1" class="image"><a href="image%2028.png"><img style="width:445px" src="image%2028.png"/></a></figure><p id="1030b3cb-3a64-8046-b9e2-cbeed5234e9b" class="">
+</p><p id="1030b3cb-3a64-802b-9b5d-fd8a3efd87a6" class="">
+</p><h1 id="f0358264-f862-43e4-84f3-db47e0460e4e" class=""><mark class="highlight-gray_background">Formação dos Solos</mark></h1><figure id="1030b3cb-3a64-80fd-afde-e8dadbab7625" class="image"><a href="image%2029.png"><img style="width:445px" src="image%2029.png"/></a></figure><p id="c9496243-a5c8-4a6c-a416-4f53694c6774" class="">
+</p><h2 id="1030b3cb-3a64-80a6-9b18-ffa5b7248955" class=""><mark class="highlight-gray_background">E as cores?</mark></h2><figure id="1030b3cb-3a64-8098-a7e6-e38185a63b22" class="image"><a href="image%2030.png"><img style="width:445px" src="image%2030.png"/></a></figure><p id="a854d6ca-c09d-4f4a-bcdb-2532c3294d57" class="">
+</p><h2 id="1030b3cb-3a64-809e-a4a9-d66aa7ec5904" class=""><mark class="highlight-gray_background">Formação</mark></h2><p id="db83b1c2-e030-4d0c-8a74-e5e052e38e90" class=""><mark class="highlight-gray_background">O solo é formado por uma combinação de frações minerais como cascalho, areia, silte, partículas de argila e matéria orgânica, que determinam sua textura e estrutura. A textura do solo depende da proporção dessas frações, enquanto a estrutura do solo, que afeta o movimento de água, ar e nutrientes, é formada pelos agregados de partículas.</mark></p><p id="7fb97631-0887-4ca6-8e85-d3dc20c8389c" class=""><mark class="highlight-gray_background">Solos arenosos, por exemplo, têm pouca estrutura e drenam facilmente, enquanto solos com mais argila são mais resistentes, mas têm drenagem mais lenta. Fatores como a atividade de raízes e minhocas podem melhorar a estrutura do solo, mas práticas como o cultivo excessivo podem causar compactação, diminuindo a qualidade do solo. A presença de sódio em excesso pode fazer com que o solo se torne sódico, levando à dispersão de argila e formação de crostas na superfície, o que pode ser tratado com gesso. O processo de &quot;abate&quot;, causado por chuvas intensas, também pode formar crostas, afetando a infiltração da água e o crescimento de plantas</mark></p><p id="c040abcd-86a9-4f9d-b4fc-65ace9cad5dc" class="">
+</p><figure id="1030b3cb-3a64-80b3-b358-ce94b71e9454" class="image"><a href="image%2031.png"><img style="width:445px" src="image%2031.png"/></a></figure><p id="1030b3cb-3a64-80e0-84b4-f30571481b6d" class="">
+</p><div><p id="959f035e-17ae-42af-9b7c-3aa4ba90c52d" class="">
+</p></div><figure id="8f906428-dbea-4c82-8e64-ac422a02ef38" class="image"><a href="image%2032.png"><img style="width:445px" src="image%2032.png"/></a></figure><figure id="1030b3cb-3a64-804a-b280-d367b5992efb" class="image"><a href="image%2033.png"><img style="width:445px" src="image%2033.png"/></a></figure><figure id="1030b3cb-3a64-807a-b310-d95a3226717c" class="image"><a href="image%2034.png"><img style="width:445px" src="image%2034.png"/></a></figure><figure id="1030b3cb-3a64-80df-a921-d4a933c53e13" class="image"><a href="image%2035.png"><img style="width:445px" src="image%2035.png"/></a></figure><p id="1030b3cb-3a64-8077-a74d-daa50a16f95d" class="">
+</p><figure id="1030b3cb-3a64-80b2-abc0-e85b38a8daec" class="image"><a href="image%2036.png"><img style="width:445px" src="image%2036.png"/></a></figure><figure id="1030b3cb-3a64-8041-99db-d5dee548fc58" class="image"><a href="image%2037.png"><img style="width:445px" src="image%2037.png"/></a></figure><p id="1030b3cb-3a64-80ec-a32c-fbcb5b86dd23" class="">
+</p><figure id="1030b3cb-3a64-80d2-820d-d4d06cdba0ca" class="image"><a href="image%2038.png"><img style="width:445px" src="image%2038.png"/></a></figure><h1 id="1030b3cb-3a64-807e-b08b-c323817700b0" class=""><mark class="highlight-pink_background">Formação do Relevo</mark></h1><p id="1030b3cb-3a64-8076-a0ec-d826280791ed" class="">
+</p><h2 id="1030b3cb-3a64-80e5-880b-d4df63db44db" class=""><mark class="highlight-pink_background"><strong>Mas... O que é “relevo”?</strong></mark></h2><p id="c491fd71-25e4-407c-9384-04a55b3d9f94" class=""><mark class="highlight-pink_background">Relevo é o conjunto das diferentes formas que a superfície terrestre apresenta, resultantes da ação combinada de forças internas e externas ao longo do tempo. Essas formas variam em elevação, inclinação, e composição, podendo incluir montanhas, planaltos, vales, colinas, depressões, planícies, e outras feições geográficas. O relevo influencia diretamente o clima, a hidrografia, a vegetação, a ocupação humana e as atividades econômicas de uma região.</mark></p><p id="1030b3cb-3a64-80d9-b8d3-fbb60f39ae81" class="">
+</p><h2 id="1030b3cb-3a64-801e-9bd8-daa30f197831" class=""><mark class="highlight-pink_background"><strong>Formação</strong></mark></h2><p id="13776b76-a2cc-4b04-b72d-212f04e67d5d" class=""><mark class="highlight-pink_background">Os relevos da Terra são moldados por processos naturais ao longo de milhões de anos, formando a &quot;pele&quot; do nosso planeta. A crosta terrestre é como um grande quebra-cabeça de placas tectônicas em constante movimento. Quando essas placas colidem, se afastam ou deslizam umas sobre as outras, criam diferentes formas de relevo. Um exemplo é o Himalaya, formado pela colisão de placas tectônicas, e terremotos que podem ocorrer devido a esses movimentos. O vulcanismo também desempenha um papel crucial; quando vulcões entram em erupção, liberam lava e cinzas que se solidificam, formando novos relevos como ilhas vulcânicas e planaltos.<br/>Além das forças internas, as forças externas são fundamentais. Água, vento e gelo erodem, transportam e depositam sedimentos. Por exemplo, rios esculpem vales e canyons ao longo de suas trajetórias, enquanto o gelo das geleiras forma vales em formato de U. Esses processos combinados resultam na incrível diversidade de relevos que vemos hoje: montanhas, vales, planícies e colinas. O relevo da Terra é um testemunho da dinâmica constante e da força da natureza, mostrando como nosso planeta está sempre em transformação.<br/></mark></p><p id="62adb774-d40a-4b22-b95d-1b66b93893a3" class="">
+</p><h2 id="1030b3cb-3a64-802c-9fd7-f43002761bfa" class=""><mark class="highlight-pink_background"><strong>Agentes</strong></mark></h2><p id="1030b3cb-3a64-8069-b103-dfe7f5318843" class=""><mark class="highlight-pink_background">O relevo terrestre está em constante transformação devido a agentes internos e externos. Os agentes internos, ou endógenos, incluem o tectonismo, que move placas tectônicas e forma montanhas e vulcões, abalos sísmicos (terremotos) que ocorrem devido a movimentos da crosta, e vulcanismo, que cria vulcões ao liberar magma.</mark></p><p id="1030b3cb-3a64-803b-9e5c-f6f9b3500714" class=""><mark class="highlight-pink_background">Os agentes externos, ou exógenos, esculpem e desgastam o relevo. A água é o principal agente, atuando através da erosão pluvial (chuvas), fluvial (rios), marinha (mares) e glacial (geleiras), moldando paisagens e formando elementos como ravinas e praias. Os ventos também contribuem com a erosão eólica, enquanto o intemperismo, que envolve a desintegração e decomposição das rochas e solos, também ajuda na formação de novas paisagens ao longo do tempo.</mark></p><p id="1030b3cb-3a64-8002-951b-f848c8ef4aee" class="">
+</p><figure id="1030b3cb-3a64-8053-a3a9-c6fa3ca39c95" class="image"><a href="image%2039.png"><img style="width:816px" src="image%2039.png"/></a></figure><figure id="1040b3cb-3a64-8028-95a5-d89b5a6c0d33" class="image"><a href="image%2040.png"><img style="width:480px" src="image%2040.png"/></a></figure><figure id="1040b3cb-3a64-8071-b8e5-c242603a6885" class="image"><a href="image%2041.png"><img style="width:480px" src="image%2041.png"/></a></figure><figure id="1040b3cb-3a64-808f-ad1f-c96c2b4e2bc9" class="image"><a href="image%2042.png"><img style="width:480px" src="image%2042.png"/></a></figure><figure id="1040b3cb-3a64-803d-aa4f-e71be0940a49" class="image"><a href="image%2043.png"><img style="width:480px" src="image%2043.png"/></a></figure><figure id="1040b3cb-3a64-804a-bf3a-d869fff8cab3" class="image"><a href="image%2044.png"><img style="width:480px" src="image%2044.png"/></a></figure><figure id="1040b3cb-3a64-801b-8750-ce098f74bebf" class="image"><a href="image%2045.png"><img style="width:480px" src="image%2045.png"/></a></figure><figure id="1040b3cb-3a64-8055-abcd-de4351d2227d" class="image"><a href="image%2046.png"><img style="width:480px" src="image%2046.png"/></a></figure><figure id="1040b3cb-3a64-8070-abd5-f68a0d3ad864" class="image"><a href="image%2047.png"><img style="width:480px" src="image%2047.png"/></a></figure><p id="1040b3cb-3a64-8079-a2cf-e3129e9a9ea0" class="">
+</p><h2 id="2009a95f-fa2b-4564-8835-aacd5974cfed" class=""><mark class="highlight-pink_background"><strong>Domínios e os relevos</strong></mark></h2><p id="1040b3cb-3a64-801d-bf9f-cceff22c0de2" class=""><mark class="highlight-pink_background">Os domínios morfoclimáticos influenciam a formação do relevo ao combinar fatores climáticos, biológicos e geomorfológicos. O clima determina processos de intemperismo e erosão, com intemperismo químico predominando em áreas úmidas, como na Amazônia, e intemperismo físico em regiões secas, como a Caatinga. A vegetação também protege o solo da erosão, sendo mais eficaz em áreas densamente vegetadas, como o Cerrado, e menos em locais com vegetação esparsa, como as pradarias. O relevo acidentado intensifica a erosão pluvial, enquanto planícies tendem a acumular sedimentos. Os rios esculpem vales e modelam o relevo em vários domínios, como o Cerrado e as pradarias, enquanto fatores extremos, como enchentes no Pantanal e o congelamento nas regiões altas, criam diferentes formas de relevo.</mark></p><p id="1040b3cb-3a64-80b1-b078-c53f373fa3f6" class="">
+</p><h1 id="e895abe7-5950-4590-b074-f19506b6c016" class=""><mark class="highlight-red_background"><strong>Impactos Ambientais</strong></mark></h1><p id="1040b3cb-3a64-8096-b70c-fec39fbcb703" class="">
+</p><p id="1040b3cb-3a64-8044-a901-eee19eff7599" class=""><mark class="highlight-red_background"><strong>Desertificação</strong></mark><mark class="highlight-red_background">: É o processo de degradação do solo em áreas áridas, semiáridas e subúmidas, causado principalmente pela atividade humana, como o desmatamento, pastoreio excessivo e uso inadequado do solo. No Brasil, ocorre especialmente no semiárido da Caatinga.</mark></p><p id="1040b3cb-3a64-80be-b416-e5ac62e57227" class=""><mark class="highlight-red_background"><strong>Desmatamento</strong></mark><mark class="highlight-red_background">: Refere-se à remoção total ou parcial da cobertura vegetal de uma área, geralmente para agricultura, pecuária ou expansão urbana. No Brasil, o desmatamento é um grande problema na Amazônia e na Mata Atlântica, resultando na perda de biodiversidade e desequilíbrio climático.</mark></p><p id="f80024a9-58a5-40f4-bd6d-2052bc52f9d7" class=""><mark class="highlight-red_background"><strong>Erosão</strong></mark><mark class="highlight-red_background">: É o desgaste da superfície do solo devido à ação de vento, água ou atividades humanas, como a agricultura mal planejada. A erosão remove a camada fértil do solo, afetando a capacidade de produção agrícola e aumentando o risco de desastres naturais.</mark></p><p id="1040b3cb-3a64-805b-b944-c0dc074e7198" class=""><mark class="highlight-red_background"><strong>Monocultura</strong></mark><mark class="highlight-red_background">: É a prática de plantar uma única espécie de cultura em grandes extensões de terra por longos períodos. Embora seja economicamente vantajosa, essa prática esgota os nutrientes do solo, reduz a biodiversidade e pode levar a problemas como a erosão.</mark></p><p id="0f241fa5-17f0-4741-bcf5-ad2a6e5dd67b" class=""><mark class="highlight-red_background"><strong>Assoreamento</strong></mark><mark class="highlight-red_background">: É o acúmulo de sedimentos nos leitos dos rios e corpos d&#x27;água, reduzindo sua profundidade e capacidade de armazenamento. Esse processo é causado principalmente pela erosão do solo devido ao desmatamento e agricultura sem controle.</mark></p><hr id="1040b3cb-3a64-80b0-8e6e-c4152e8329d9"/><p id="1040b3cb-3a64-80ff-b6cc-e4c5d81219d4" class="">
+</p><p id="1040b3cb-3a64-8086-9438-cc3c694d566b" class="">
+</p><p id="1040b3cb-3a64-8085-8612-c9d3e4b437fe" class=""><mark class="highlight-red_background">A ação humana tem gerado impactos significativos nos domínios morfoclimáticos do Brasil, resultando em degradação ambiental e perda de biodiversidade. Atividades como desmatamento, desertificação e poluição têm intensificado a erosão e desequilíbrios ecológicos. O desmatamento da Amazônia é um dos exemplos mais preocupantes, causado pela expansão agropecuária e madeireira. A destruição da floresta leva à perda de habitats, contribui para o aquecimento global pela diminuição da absorção de CO₂ e altera o ciclo hidrológico, afetando as chuvas e promovendo a erosão, degradando os solos da região.</mark></p><figure id="1040b3cb-3a64-80ae-9d6e-ec0215b07810" class="image"><a href="image%2048.png"><img style="width:444.96875px" src="image%2048.png"/></a></figure><p id="1040b3cb-3a64-8049-8cd5-e89a0c6c7798" class="">
+</p><p id="1040b3cb-3a64-80b7-b2eb-d16a0066d3de" class=""><mark class="highlight-red_background">Na região do Cerrado, que é conhecido como o &quot;berço das águas&quot; por abrigar as nascentes de importantes rios brasileiros, a expansão da agricultura e da pecuária também tem causado grandes danos. A remoção da vegetação nativa para a criação de pastos e plantações de soja tem acelerado o processo de erosão e esgotamento dos recursos hídricos. A substituição da vegetação típica do Cerrado por monoculturas degrada o solo e compromete a recarga dos aquíferos, afetando diretamente o abastecimento de água em várias regiões do Brasil.</mark></p><figure id="f6a6b171-5157-4250-9d64-3c2085d5b8d0" class="image"><a href="image%2049.png"><img style="width:707.96875px" src="image%2049.png"/></a></figure><p id="1040b3cb-3a64-80df-aeae-e729a0c8d3c4" class="">
+</p><p id="2d58bf7a-7381-4f30-b665-141cccc944ab" class=""><mark class="highlight-red_background">A desertificação é um fenômeno que ocorre principalmente no domínio da Caatinga, no semiárido nordestino. A exploração intensiva do solo, aliada ao desmatamento e ao pastoreio excessivo, tem levado ao empobrecimento do solo e à perda de sua capacidade produtiva. O fenômeno da desertificação transforma áreas produtivas em regiões áridas e inóspitas, prejudicando a agricultura de subsistência e agravando as condições de vida da população local. Cidades como Gilbués, no Piauí, já sofrem com esses efeitos, onde vastas áreas do solo estão se tornando improdutivas devido à erosão e à seca.</mark></p><figure id="1040b3cb-3a64-8039-84a7-f72866b1a324" class="image"><a href="image%2050.png"><img style="width:444.984375px" src="image%2050.png"/></a></figure><p id="1040b3cb-3a64-805f-b73e-c89d6adbae86" class="">
+</p><p id="1040b3cb-3a64-80cd-82f4-cbdec8e03f88" class=""><mark class="highlight-red_background">O Pantanal, uma das maiores áreas úmidas do mundo, também está sob ameaça. O avanço da pecuária e a construção de hidrelétricas na bacia do rio Paraguai estão alterando o ciclo natural das cheias e secas, fundamental para a manutenção dos ecossistemas pantaneiros. O desmatamento nas áreas de planalto que circundam o Pantanal provoca o assoreamento dos rios, reduzindo a capacidade de suporte dos corpos d&#x27;água e prejudicando a fauna aquática. As queimadas, muitas vezes provocadas para a renovação de pastagens, intensificam a degradação e a perda de biodiversidade</mark></p><figure id="1040b3cb-3a64-80b4-ad50-fac82b53a27e" class="image"><a href="image%2051.png"><img style="width:444.984375px" src="image%2051.png"/></a></figure><p id="1040b3cb-3a64-806d-a613-e03dab0a9b23" class="">
+</p><p id="1040b3cb-3a64-8001-975a-e4038b27d93b" class=""><mark class="highlight-red_background">Nas Pradarias Sulinas, o impacto humano se manifesta através da substituição das gramíneas nativas por monoculturas de arroz e soja. A degradação da cobertura vegetal e a utilização intensiva do solo, muitas vezes sem as técnicas adequadas de manejo, resultam em perda de fertilidade e erosão do solo, além de impactar a fauna local, que depende das pastagens naturais. Por fim, o Mares de Morros, que abrange a Mata Atlântica, uma das florestas mais biodiversas do planeta, já perdeu mais de 90% de sua cobertura original. A expansão urbana, industrial e agrícola é a principal responsável pelo desmatamento desta região. A destruição da vegetação nativa resulta em graves consequências, como a erosão, a perda de solo fértil e o assoreamento dos rios. Além disso, a fragmentação das florestas ameaça inúmeras espécies endêmicas e coloca em risco os recursos hídricos, fundamentais para o abastecimento das grandes cidades.</mark></p><p id="1040b3cb-3a64-806e-97c4-f3fb70d116f3" class="">
+</p><hr id="1040b3cb-3a64-80c8-8532-deae38c97231"/><p id="1040b3cb-3a64-8016-a8c5-dc1441bcaea4" class="">
+</p><p id="1040b3cb-3a64-80c2-ad03-dc9c9e1aa43b" class="">
+</p><ul id="4b14bae5-b63a-42d2-972f-96bb3a0343e9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Unidades de Conservação (UCs)</strong></mark><mark class="highlight-red_background">: Parques Nacionais e Reservas Biológicas protegem áreas biodiversas, limitando o uso de recursos naturais e preservando ecossistemas como Amazônia e Mata Atlântica.</mark></li></ul><ul id="d998b511-867e-4507-8af2-e71d7509a378" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Agroecologia</strong></mark><mark class="highlight-red_background">: Agricultura sustentável que integra práticas ecológicas, reduzindo insumos químicos e promovendo regeneração do solo, especialmente em regiões como o Cerrado.</mark></li></ul><ul id="0b764c57-9905-4afc-8628-6c17bd2cd352" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Reflorestamento e recuperação de áreas degradadas</strong></mark><mark class="highlight-red_background">: Restaura ecossistemas, melhora o solo, protege bacias hidrográficas e captura carbono, mitigando mudanças climáticas.</mark></li></ul><ul id="e10a4962-f3a0-4194-9383-39ac2f231820" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Gestão sustentável de recursos hídricos</strong></mark><mark class="highlight-red_background">: Uso racional da água e recuperação de matas ciliares previnem erosão e garantem abastecimento de água.</mark></li></ul><ul id="a86ab766-06fc-4bdb-a0d9-f94d237532c3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Turismo sustentável</strong></mark><mark class="highlight-red_background">: Ecoturismo, em locais como Pantanal e Chapada Diamantina, promove conservação e gera renda para comunidades locais.</mark></li></ul><ul id="a2090350-570a-4949-a115-dafd5599ec08" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Educação ambiental</strong></mark><mark class="highlight-red_background">: Conscientização sobre práticas sustentáveis, incentivando a redução do consumo e cuidado com resíduos.</mark></li></ul><ul id="637f3709-3601-4ce5-b7af-88b3fabe2e84" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Conservação ambiental e manejo sustentável</strong></mark><mark class="highlight-red_background">: Essenciais para equilibrar o uso de recursos naturais e a preservação dos ecossistemas.</mark></li></ul><ul id="b71cbbfa-6e43-4a1a-9ba6-e21e14b7dd2c" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-red_background"><strong>Pagamentos por Serviços Ambientais (PSA)</strong></mark><mark class="highlight-red_background">: Incentivos econômicos para proprietários de terras que preservam florestas e nascentes.</mark></li></ul><p id="1040b3cb-3a64-8034-8aed-f9d57556a8d0" class="">
+</p><p id="3a180909-8ac3-4a5a-a024-67b83f6b58c1" class=""><mark class="highlight-red_background"><strong>Programa Bolsa Verde</strong></mark><mark class="highlight-red_background">: Oferece incentivos financeiros para famílias de baixa renda em áreas de preservação, em troca da adoção de práticas sustentáveis.</mark></p><p id="1040b3cb-3a64-807d-84e7-d6c29243e5f9" class=""><mark class="highlight-red_background"><strong>Código Florestal e Cadastro Ambiental Rural (CAR)</strong></mark><mark class="highlight-red_background">:Regula o uso da terra em propriedades rurais, exigindo a preservação de áreas específicas e criando um sistema de monitoramento das áreas protegidas.</mark></p><p id="1040b3cb-3a64-80ee-814f-e4357087474e" class=""><mark class="highlight-red_background"><strong>Pacto pela Restauração da Mata Atlântica</strong></mark><mark class="highlight-red_background">: Colaborações entre ONGs, governos e empresas para restaurar 15 milhões de hectares da Mata Atlântica até 2050, com foco em biodiversidade e sustentabilidade.</mark></p><p id="1040b3cb-3a64-80e8-93c4-dc264ecd2903" class=""><mark class="highlight-red_background"><strong>Projeto TAMAR</strong></mark><mark class="highlight-red_background">: Protege tartarugas marinhas ameaçadas, combinando conservação, educação ambiental e geração de emprego nas comunidades costeiras.</mark></p><p id="1040b3cb-3a64-800a-b04c-c27b3c963556" class=""><mark class="highlight-red_background"><strong>SISA - Sistema de Incentivos aos Serviços Ambientais</strong></mark><mark class="highlight-red_background">: Política do Acre que compensa financeiramente proprietários que adotam práticas sustentáveis, incluindo projetos de REDD+.</mark></p><p id="1040b3cb-3a64-8066-9d65-fa177949ffd1" class=""><mark class="highlight-red_background"><strong>Programa Áreas Protegidas da Amazônia (ARPA)</strong></mark><mark class="highlight-red_background">:Um dos maiores programas de conservação de florestas tropicais, criado para expandir e fortalecer áreas protegidas na Amazônia, com suporte técnico e financeiro.</mark></p><p id="1040b3cb-3a64-80dc-8499-e53d7b0a3c30" class="">
+</p><h1 id="1040b3cb-3a64-803a-9f9a-cbb0cff03c33" class=""><mark class="highlight-pink_background"><strong>Abordagem Integrada</strong></mark></h1><p id="9ae463d0-35ca-4e14-a343-730f88d15bc9" class=""><mark class="highlight-pink_background">A abordagem integrada para a preservação ambiental é fundamental porque considera a interconexão entre ecossistemas, sociedade e economia. Ao entender como atividades humanas afetam o meio ambiente, é possível criar estratégias mais eficazes de conservação. Essa visão inclui a participação de comunidades locais, que muitas vezes possuem conhecimentos tradicionais sobre o uso sustentável dos recursos, além da coordenação entre políticas públicas e o setor privado, incentivando práticas empresariais responsáveis. A educação ambiental também desempenha um papel central, promovendo a conscientização e o engajamento da sociedade. Por fim, a cooperação internacional é essencial para enfrentar desafios globais como as mudanças climáticas e a perda de biodiversidade, garantindo a proteção ambiental de forma abrangente e sustentável.</mark></p><p id="1040b3cb-3a64-8065-bd96-c87e98ff525f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"><hr/><details open="" style="padding-top:1em"><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0">Inline comments</summary><div class="indented"><div><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AGNmyxbMCUvgIg2ZxB08qtQSLWgjCvoS-JqFujdcVyCe=s100" class="icon user-icon"/><span><b>Joao Vitor Macedo</b> <time style="font-size:0.8em">Sep 15, 2024, 10:11 PM</time></span></span></div><div style="padding:0.2em">1: Domínios morfoclimáticos são grandes áreas naturais que combinam relevo e clima, formando regiões únicas em termos de paisagens, solos, vegetação e recursos hídricos. Eles surgem da interação entre elementos como temperatura e umidade com o terreno, moldando o solo e a vegetação ao longo do tempo.<br/>Compreender esses domínios é essencial para entender a diversidade ambiental de uma região.<br/><br/>2: Aziz Ab&#x27;Saber, um dos principais geógrafos brasileiros, criou o conceito de domínios morfoclimáticos para ajudar a entender e classificar as diversas paisagens naturais do Brasil. Ele queria uma forma de analisar como o relevo, o clima, os solos e a vegetação influenciam o território brasileiro.<br/><br/>3: Formação e Tipos de Solos:<br/>Clima: Em climas quentes e úmidos, o solo se forma mais rápido.<br/>Vegetação: A vegetação melhora a fertilidade do solo e evita erosão.<br/>Relevo: Em terrenos inclinados, a erosão é maior; em áreas planas, o solo acumula e é mais profundo.<br/><br/>4: Distribuição e Tipos de Vegetação:<br/>Clima: O tipo de vegetação depende do clima; climas úmidos suportam florestas densas, e climas secos suportam plantas adaptadas à aridez.<br/>Solos: A qualidade do solo afeta a variedade e a quantidade de vegetação.<br/>Relevo: A vegetação muda com a altitude, inclinação e exposição ao sol, especialmente em áreas montanhosas.<br/><br/>5: Ciclos Hidrológicos e Disponibilidade de Água:<br/>Clima: O clima afeta o ciclo da água, influenciando a quantidade de precipitação, evaporação e transpiração. Regiões com muita chuva têm mais corpos d&#x27;água, o que afeta a vegetação e o solo.<br/>Relevo: O relevo determina como a água flui e se acumula. Terrenos elevados podem ter mais escoamento, enquanto áreas baixas acumulam água, formando pântanos ou lagos.<br/>Vegetação e Solos: A vegetação ajuda a reter água, reduzindo o escoamento e promovendo a infiltração no solo. Solos ricos em matéria orgânica também retêm mais água, essencial para ecossistemas saudáveis.<br/><br/>6: Controle de Erosão e Estabilidade do Terreno:<br/>Vegetação: As raízes das plantas fixam o solo, evitando a erosão por vento e água. Sem vegetação, o solo fica vulnerável a desgastes e deslizamentos.<br/>Relevo: Em áreas com relevo acentuado, a vegetação é crucial para prevenir deslizamentos e erosão. O relevo também molda a formação de canais e cursos d&#x27;água, que podem aumentar a erosão se o solo não estiver bem estabilizado pela vegetação.<br/><br/></div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><mark class="highlight-purple_background">Domínio Amazônico</mark></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AGNmyxbMCUvgIg2ZxB08qtQSLWgjCvoS-JqFujdcVyCe=s100" class="icon user-icon"/><span><b>Joao Vitor Macedo</b> <time style="font-size:0.8em">Sep 15, 2024, 10:56 PM</time></span></span></div><div style="padding:0.2em">Domínio Amazônico<br/><br/>Clima Equatorial:  A região tem um clima quente (24°C a 27°C) e úmido (acima de 80%), com chuvas abundantes (mais de 2.000 mm anuais), criando um ambiente ideal para a vegetação.<br/>Vegetação Densa:  A floresta amazônica é uma floresta tropical úmida e complexa, com um dossel fechado que abriga uma grande diversidade de plantas e animais.<br/>Solos Lateríticos Os solos amazônicos são lateríticos.<br/>Relevo A região é formada por planícies e terras baixas, com altitudes entre 0 e 300 metros. O sistema fluvial da Amazônia, com o Rio Amazonas e seus afluentes, é o maior do mundo e sustenta a fauna e flora locais.<br/><br/>Caatinga:<br/><br/>Clima Semiárido: A Caatinga tem um clima quente e seco, com temperaturas acima de 30°C e chuvas irregulares. A baixa umidade cria um ambiente desafiador para a vida.<br/>Vegetação Xerófita: A vegetação é adaptada à seca, com plantas que possuem folhas pequenas ou espinhosas, caules que armazenam água e raízes profundas.<br/>Solos Pedregosos: Os solos são pedregosos e têm baixa fertilidade, com pouca capacidade de retenção de água.<br/>Relevo de Depressões Intermontanas: A Caatinga tem depressões entre montanhas, que influenciam a drenagem e formam rios temporários e lagoas sazonais. O relevo também inclui planaltos e chapadas.<br/><br/></div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><mark class="highlight-yellow_background">Domínio Mares de Morros </mark></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AGNmyxbMCUvgIg2ZxB08qtQSLWgjCvoS-JqFujdcVyCe=s100" class="icon user-icon"/><span><b>Joao Vitor Macedo</b> <time style="font-size:0.8em">Sep 15, 2024, 11:43 PM</time></span></span></div><div style="padding:0.2em">Mares de Morros:<br/><br/>Clima Tropical Úmido: A Mata Atlântica tem um clima tropical úmido, com altas temperaturas e umidade durante o ano inteiro. A precipitação alta, cria um ambiente sempre verde e propício para vegetação densa.<br/>Vegetação da Floresta Atlântica: A vegetação é densa e diversificada, com grandes árvores como jequitibá e pau-brasil, além de epífitas como bromélias e orquídeas.<br/>Solos Argilosos (Lato, Cambi, Nitos): Os solos são principalmente argilosos, bem drenados, mas a lixiviação devido às chuvas pode reduzir a fertilidade.<br/>Relevo de Escarpas e Morros: O relevo é caracterizado por escarpas e morros, conhecidos como Mares de Morros, resultantes de erosão.<br/><br/><br/>Cerrado:<br/><br/>Clima Tropical Sazonal: O clima é tropical sazonal, com uma estação chuvosa de outubro a abril e uma seca de maio a setembro. As temperaturas variam entre 20°C e 26°C, influenciando a vegetação e os ciclos de vida das espécies do Cerrado.<br/>Vegetação de Savana: A vegetação é típica de savana, com gramíneas, arbustos e árvores pequenas a médias, como o ipê e o pequizeiro. As plantas têm adaptações como cascas grossas e raízes profundas para lidar com o solo pobre e a seca.<br/>Solos Latossolos: Os solos são latossolos, profundos e bem drenados.<br/>Relevo de Chapadas: O relevo é caracterizado por chapadas, grandes superfícies planas ou suavemente onduladas, com vales e rios.<br/><br/><br/></div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><mark class="highlight-purple_background">Domínio Araucárias</mark></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AGNmyxbMCUvgIg2ZxB08qtQSLWgjCvoS-JqFujdcVyCe=s100" class="icon user-icon"/><span><b>Joao Vitor Macedo</b> <time style="font-size:0.8em">Sep 15, 2024, 11:49 PM</time></span></span></div><div style="padding:0.2em">Araucárias:<br/> <br/><br/><strong>Clima Subtropical</strong>: O clima é caracterizado por verões quentes e invernos frios, com geadas e neve em áreas elevadas. A precipitação é abundante e bem distribuída, favorecendo uma vegetação densa.<br/><br/><strong>Vegetação de Floresta de Araucárias</strong>: Dominada pela Araucária angustifolia, junto com outras espécies como imbuia e cedro, essa floresta sustenta uma rica diversidade de fauna.<br/><br/><strong>Solos Férteis (Cambissolos - Podzóis)</strong>: Os solos são ricos em matéria orgânica e adequados para agricultura e silvicultura.<br/><br/><strong>Relevo de Planaltos</strong>: O relevo é composto por planaltos com altitudes de 800 a 1.200 metros, formando florestas densas e nascentes de importantes rios.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div><div class="indented"><div><p style="padding:0.2em"><b>Block text</b>: <mark class="highlight-yellow_background"><mark class="highlight-yellow_background">Domínio Pradarias</mark></mark></p><ul class="toggle"><li><div><span class="user" style="padding:0.2em"><img src="https://lh3.googleusercontent.com/a/AGNmyxbMCUvgIg2ZxB08qtQSLWgjCvoS-JqFujdcVyCe=s100" class="icon user-icon"/><span><b>Joao Vitor Macedo</b> <time style="font-size:0.8em">Sep 15, 2024, 11:55 PM</time></span></span></div><div style="padding:0.2em">Pradarias:<br/><br/><strong>Clima Temperado</strong>: Tem estações bem definidas, com verões quentes e invernos frios. A precipitação é moderada<br/><br/><strong>Vegetação de Campos</strong>: Dominada por gramíneas e plantas herbáceas, com poucas árvores. A fauna inclui aves, roedores e insetos.<br/><br/><strong>Solos de Campos</strong>: Solos férteis, ricos em matéria orgânica, adequados para agricultura e pecuária, mas precisam ser conservados para evitar degradação.<br/><br/><strong>Relevo de Planícies</strong>: Amplas planícies, ideais para pastoreio e agricultura, e importantes para a recarga de aquíferos.</div><div style="padding:0.3em"></div></li></ul></div><hr/></div></details></span></body></html>
